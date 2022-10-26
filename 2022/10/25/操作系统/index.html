@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>操作系统课后题 | LiuQi's blog</title><meta name="author" content="陆柒"><meta name="copyright" content="陆柒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="操作系统老师布置的一些课后题 第三章：处理机调度与死锁高级调度与低级调度的主要任务是什么? 为什么要引入中级调度? 高级调度的主要任务：用于决定把外存上处于后背队列中的哪些作业调入内存，并为它们创建进程，分配必要的资源，再将新创建的进程插入就绪队列上，准备执行。低级调度的主要任务：用于决定就绪队列中的哪个进程获得处理机，然后再由分派程序执行将处理机分配给该进程的具体操作。 引起进程调度的原因在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统课后题">
+<meta property="og:url" content="http://example.com/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="LiuQi&#39;s blog">
+<meta property="og:description" content="操作系统老师布置的一些课后题 第三章：处理机调度与死锁高级调度与低级调度的主要任务是什么? 为什么要引入中级调度? 高级调度的主要任务：用于决定把外存上处于后背队列中的哪些作业调入内存，并为它们创建进程，分配必要的资源，再将新创建的进程插入就绪队列上，准备执行。低级调度的主要任务：用于决定就绪队列中的哪个进程获得处理机，然后再由分派程序执行将处理机分配给该进程的具体操作。 引起进程调度的原因在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/4.jpg">
+<meta property="article:published_time" content="2022-10-25T09:16:00.242Z">
+<meta property="article:modified_time" content="2022-10-26T04:25:16.673Z">
+<meta property="article:author" content="陆柒">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/4.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '操作系统课后题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-26 12:25:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LiuQi's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">操作系统课后题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-25T09:16:00.242Z" title="发表于 2022-10-25 17:16:00">2022-10-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-26T04:25:16.673Z" title="更新于 2022-10-26 12:25:16">2022-10-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="操作系统课后题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><p>  操作系统老师布置的一些课后题</p>
+<h2 id="第三章：处理机调度与死锁"><a href="#第三章：处理机调度与死锁" class="headerlink" title="第三章：处理机调度与死锁"></a>第三章：处理机调度与死锁</h2><h3 id="高级调度与低级调度的主要任务是什么-为什么要引入中级调度"><a href="#高级调度与低级调度的主要任务是什么-为什么要引入中级调度" class="headerlink" title="高级调度与低级调度的主要任务是什么? 为什么要引入中级调度?"></a>高级调度与低级调度的主要任务是什么? 为什么要引入中级调度?</h3><p> 高级调度的主要任务：用于决定把外存上处于后背队列中的哪些作业调入内存，并为它们创建进程，分配必要的资源，再将新创建的进程插入就绪队列上，准备执行。低级调度的主要任务：用于决定就绪队列中的哪个进程获得处理机，然后再由分派程序执行将处理机分配给该进程的具体操作。</p>
+<h3 id="引起进程调度的原因"><a href="#引起进程调度的原因" class="headerlink" title="引起进程调度的原因"></a>引起进程调度的原因</h3><p>在不可剥夺方式下的引起进程调度的原因：</p>
+<p>　(1)正在执行的进程执行完毕。这时，如果不选择新的就绪进程执行，将浪费处理机资源。</p>
+<p>　(2)执行中进程自己调用阻塞原语将自己阻塞起来进入睡眠等状态。</p>
+<p>　(3)执行中进程调用了P原语操作，从而因资源不足而被阻塞；或调用了v原语操作激活了等待资源的进程队列。</p>
+<p>　(4)执行中进程提出I&#x2F;O请求后被阻塞。</p>
+<p>　(5)在分时系统中时间片已经用完。</p>
+<p>　(6)在执行完系统调用等系统程序后返回用户进程时，这时可看作系统进程执行完毕，从而可调度选择一新的用户进程执行。</p>
+<p>在CPU执行方式是可剥夺时．还有：</p>
+<p>　(7)就绪队列中的某进程的优先级变得高于当前执行进程的优先级，从而也将引发进程调度。</p>
+<h3 id="什么是死锁-产生死锁的必要条件-怎样预防和避免死锁"><a href="#什么是死锁-产生死锁的必要条件-怎样预防和避免死锁" class="headerlink" title="什么是死锁? 产生死锁的必要条件?怎样预防和避免死锁?"></a>什么是死锁? 产生死锁的必要条件?怎样预防和避免死锁?</h3><h4 id="什么是死锁？"><a href="#什么是死锁？" class="headerlink" title="什么是死锁？"></a>什么是死锁？</h4><p>当多个进程在运行过程中因为争夺资源而造成的一种僵局, 当进程处于这种僵持状态的时候, 若无外力作用, 它们将永远无法向前推进. 这种状态就称为死锁。</p>
+<h4 id="产生死锁的必要条件"><a href="#产生死锁的必要条件" class="headerlink" title="产生死锁的必要条件"></a>产生死锁的必要条件</h4><p>产生死锁总共有 4 个必要条件:</p>
+<p>资源互斥: 当一个资源被一个进程使用时候, 其他继承不能使用该资源</p>
+<p>资源不可剥夺: 进程已持有的资源在使用完之前是不可被剥夺的, 只能在使用完后由自己释放</p>
+<p>请求和保持: 当进程在请求其他资源的时候, 对自己已持有的资源保持不放</p>
+<p>循环等待: 即存在一个等待队列: 例如: A 占有 B 的资源, B 占有 C 的资源, C 占有 A 的资源, 这样就形成了一个等待环路。</p>
+<p>当以上 4 个条件同时成立的时候, 就会产生死锁</p>
+<h4 id="预防死锁的方法"><a href="#预防死锁的方法" class="headerlink" title="预防死锁的方法"></a>预防死锁的方法</h4><p>1.资源一次性分配(破坏请求条件): 一次性分配所有的资源, 这样就不会再有请求了</p>
+<p>2.(破坏保持条件): 一个进程只要有一个资源得不到分配, 就也不给这个进程分配其他资源</p>
+<p>3.可剥夺资源(破坏不可剥夺性): 一个进程即使获得了部分资源, 但是如果得不到其他资源, 就需要释放掉已有的资源</p>
+<p>4.资源有序分配(破坏循环等待): 系统为每类资源分配一个编号, 每一个进程按照编号以递增的顺序请求资源, 释放则相反</p>
+<h4 id="避免死锁的方法"><a href="#避免死锁的方法" class="headerlink" title="避免死锁的方法"></a>避免死锁的方法</h4><p>预防死锁的四种方法, 都会严重的影响系统性能. 因此可以尽可能去避免死锁的产生.<br>在避免死锁的策略中, 允许进程动态地申请资源. 所以, 系统在进行资源分配的时候, 会预先计算资源分配的安全性, 如果此次资源分配不会导致系统进入不安全的状态, 就将资源分配给进程, 否则, 进程等待。</p>
+<p>补充：避免死锁的方法中最经典和最重要的就是: 银行家算法<br>原理:<br>将操作系统视为一个银行家, 将操作系统所管理的资源视为银行家的资金, 进程申请资源就视为用户向银行家贷款<br>当一个顾客对资金的最大需求量不超过银行家现有的资金时, 就可以接纳该顾客<br>顾客可以分期贷款, 但是贷款的总额不可以超过最大需求量<br>当银行家现有资金不能满足用户尚需的贷款金额时, 可以推迟支付贷款, 但是使顾客在有限的时间内拿到贷款<br>当顾客得到所有所需资金后, 一定可以在有限时间内归还所有的资金</p>
+<h4 id="解除死锁的方法"><a href="#解除死锁的方法" class="headerlink" title="解除死锁的方法"></a>解除死锁的方法</h4><p> 剥夺资源: 从其他进程剥夺足够数量的资源给死锁, 用以解除死锁状态<br> 撤销进程: 撤销系统中一个或者多个死锁进程</p>
+<h3 id="一个课后题链接"><a href="#一个课后题链接" class="headerlink" title="一个课后题链接"></a>一个课后题链接</h3><p> 还是白嫖好。<br> <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50629759/article/details/120927611?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E5%B0%86%E4%B8%80%E7%BB%84%E8%BF%9B%E7%A8%8B%E5%88%86%E4%B8%BA%E5%9B%9B%E7%B1%BB%EF%BC%8C%E5%A6%82%E5%9B%BE3-23%E6%89%80%E7%A4%BA&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-120927611.nonecase&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/m0_50629759/article/details/120927611?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E5%B0%86%E4%B8%80%E7%BB%84%E8%BF%9B%E7%A8%8B%E5%88%86%E4%B8%BA%E5%9B%9B%E7%B1%BB%EF%BC%8C%E5%A6%82%E5%9B%BE3-23%E6%89%80%E7%A4%BA&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-120927611.nonecase&amp;spm=1018.2226.3001.4187</a></p>
+<h3 id="设系统中有下述解决死锁的办法"><a href="#设系统中有下述解决死锁的办法" class="headerlink" title="设系统中有下述解决死锁的办法"></a>设系统中有下述解决死锁的办法</h3><p>(1)银行家算法。</p>
+<p>(2)检测死锁，终止处于死锁状态的进程，释放该进程所占有的资源。</p>
+<p>(3)资源预分配。</p>
+<p>请问哪种办法允许最大的并发性，即哪种办法允许更多的进程无等待地向前推进?请按“并发性”从大到小对上述三种办法进行排序。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">三种办法中，首先检测死锁允许更多的进程无等待地向前推进。因为该方法允许死锁出现，即允许进程最大限度地申请并分配资源，直至出现死锁，再由系统出面解决。</span><br><span class="line">其次是银行家算法，该方法允许进程自由申请资源，只是在某个进程申请时检查系统是否处于安全状态，若是，则可立即分配，若不是，才拒绝。</span><br><span class="line">最后是资源预分配，因为此方法要求进程在运行之前申请所需的全部资源才可开始运行，这样会使得许多进程因申请不到资源而无法开始，得到资源的进程也并不是同时需要所占的全部资源，因此导致资源的浪费。</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">陆柒</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">http://example.com/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">LiuQi's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/4.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/10/26/%E5%94%A0%E5%94%A0%E5%8F%A8%E5%8F%A8/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">大摆特摆</div></div></a></div><div class="next-post pull-right"><a href="/2022/10/21/java/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">java学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">陆柒</div><div class="author-info__description">精诚所至，金石为开。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">今天也要加油鸭！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81"><span class="toc-number">1.</span> <span class="toc-text">第三章：处理机调度与死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%B0%83%E5%BA%A6%E4%B8%8E%E4%BD%8E%E7%BA%A7%E8%B0%83%E5%BA%A6%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1%E6%98%AF%E4%BB%80%E4%B9%88-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%95%E5%85%A5%E4%B8%AD%E7%BA%A7%E8%B0%83%E5%BA%A6"><span class="toc-number">1.1.</span> <span class="toc-text">高级调度与低级调度的主要任务是什么? 为什么要引入中级调度?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%B5%B7%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.2.</span> <span class="toc-text">引起进程调度的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%BB%E9%94%81-%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6-%E6%80%8E%E6%A0%B7%E9%A2%84%E9%98%B2%E5%92%8C%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-number">1.3.</span> <span class="toc-text">什么是死锁? 产生死锁的必要条件?怎样预防和避免死锁?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%BB%E9%94%81%EF%BC%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">什么是死锁？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.3.2.</span> <span class="toc-text">产生死锁的必要条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E9%98%B2%E6%AD%BB%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">预防死锁的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.4.</span> <span class="toc-text">避免死锁的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%99%A4%E6%AD%BB%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.5.</span> <span class="toc-text">解除死锁的方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E8%AF%BE%E5%90%8E%E9%A2%98%E9%93%BE%E6%8E%A5"><span class="toc-number">1.4.</span> <span class="toc-text">一个课后题链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%B3%BB%E7%BB%9F%E4%B8%AD%E6%9C%89%E4%B8%8B%E8%BF%B0%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">设系统中有下述解决死锁的办法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/26/%E5%94%A0%E5%94%A0%E5%8F%A8%E5%8F%A8/" title="大摆特摆"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大摆特摆"/></a><div class="content"><a class="title" href="/2022/10/26/%E5%94%A0%E5%94%A0%E5%8F%A8%E5%8F%A8/" title="大摆特摆">大摆特摆</a><time datetime="2022-10-26T02:45:41.664Z" title="发表于 2022-10-26 10:45:41">2022-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统课后题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统课后题"/></a><div class="content"><a class="title" href="/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统课后题">操作系统课后题</a><time datetime="2022-10-25T09:16:00.242Z" title="发表于 2022-10-25 17:16:00">2022-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/21/java/" title="java学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java学习"/></a><div class="content"><a class="title" href="/2022/10/21/java/" title="java学习">java学习</a><time datetime="2022-10-21T11:37:17.865Z" title="发表于 2022-10-21 19:37:17">2022-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/20/%E5%B8%B8%E8%A7%81%E7%94%A8%E8%AF%AD/" title="关于网络安全的常见用语缩写"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于网络安全的常见用语缩写"/></a><div class="content"><a class="title" href="/2022/10/20/%E5%B8%B8%E8%A7%81%E7%94%A8%E8%AF%AD/" title="关于网络安全的常见用语缩写">关于网络安全的常见用语缩写</a><time datetime="2022-10-20T12:06:23.806Z" title="发表于 2022-10-20 20:06:23">2022-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/17/Metasploit%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Metasploit的使用"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Metasploit的使用"/></a><div class="content"><a class="title" href="/2022/10/17/Metasploit%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Metasploit的使用">Metasploit的使用</a><time datetime="2022-10-17T06:26:38.000Z" title="发表于 2022-10-17 14:26:38">2022-10-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 陆柒</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/26/唠唠叨叨/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/8.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-26</span><a class="blog-slider__title" href="2022/10/26/唠唠叨叨/" alt="">大摆特摆</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/26/唠唠叨叨/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/25/操作系统/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/4.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-25</span><a class="blog-slider__title" href="2022/10/25/操作系统/" alt="">操作系统课后题</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/25/操作系统/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/21/java/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-21</span><a class="blog-slider__title" href="2022/10/21/java/" alt="">java学习</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/21/java/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/20/常见用语/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-20</span><a class="blog-slider__title" href="2022/10/20/常见用语/" alt="">关于网络安全的常见用语缩写</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/20/常见用语/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/17/Metasploit的使用/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-17</span><a class="blog-slider__title" href="2022/10/17/Metasploit的使用/" alt="">Metasploit的使用</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/17/Metasploit的使用/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
