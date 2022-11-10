@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>数据库复习 | LiuQi's blog</title><meta name="author" content="陆柒"><meta name="copyright" content="陆柒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="说鸽就鸽，亦是一种不鸽。 关系型数据库实质这种类型的数据库是最古老的数据库类型，关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式）。 关系型数据库以行(row)和列(column)的形式存储数据，以便于用户理解。这一系列的行和列被称为表(table)，一组表组成了一个库(database)。 表与表之间的数据记录有关系(relationship)。现实世界中的各种实体以及实体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库复习">
+<meta property="og:url" content="http://example.com/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+<meta property="og:site_name" content="LiuQi&#39;s blog">
+<meta property="og:description" content="说鸽就鸽，亦是一种不鸽。 关系型数据库实质这种类型的数据库是最古老的数据库类型，关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式）。 关系型数据库以行(row)和列(column)的形式存储数据，以便于用户理解。这一系列的行和列被称为表(table)，一组表组成了一个库(database)。 表与表之间的数据记录有关系(relationship)。现实世界中的各种实体以及实体">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/6.jpg">
+<meta property="article:published_time" content="2022-11-08T01:25:47.281Z">
+<meta property="article:modified_time" content="2022-11-10T13:16:06.860Z">
+<meta property="article:author" content="陆柒">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/6.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据库复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-10 21:16:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LiuQi's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">数据库复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-08T01:25:47.281Z" title="发表于 2022-11-08 09:25:47">2022-11-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-10T13:16:06.860Z" title="更新于 2022-11-10 21:16:06">2022-11-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库复习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><p>说鸽就鸽，亦是一种不鸽。</p>
+<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><h3 id="实质"><a href="#实质" class="headerlink" title="实质"></a>实质</h3><p>这种类型的数据库是最古老的数据库类型，关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式）。</p>
+<p>关系型数据库以行(row)和列(column)的形式存储数据，以便于用户理解。这一系列的行和列被称为表(table)，一组表组成了一个库(database)。</p>
+<p>表与表之间的数据记录有关系(relationship)。现实世界中的各种实体以及实体之间的各种联系均用关系模型来表示。关系型数据库，就是建立在关系模型基础上的数据库。</p>
+<p>SQL 就是关系型数据库的查询语言。</p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>复杂查询<br>可以用SQL语句方便的在一个表以及多个表之间做非常复杂的数据查询。</p>
+<p>事务支持<br>使得对于安全性能很高的数据访问要求得以实现。</p>
+<h2 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>非关系型数据库，可看成传统关系型数据库的功能阉割版本，基于键值对存储数据，不需要经过SQL层的解析，性能非常高。同时，通过减少不常用的功能，进一步提高性能。</p>
+<p>目前基本上大部分主流的非关系型数据库都是免费的。</p>
+<h3 id="有哪些非关系型数据库"><a href="#有哪些非关系型数据库" class="headerlink" title="有哪些非关系型数据库"></a>有哪些非关系型数据库</h3><p>相比于SQL，NoSQL 泛指非关系数据库，包括了榜单上的键值型数据库、文档型数据库、搜索引擎和列存储等，除此以外还包括图形数据库。也只有用 NoSQL 一词才能将这些技术囊括进来。</p>
+<h4 id="键值型数据库"><a href="#键值型数据库" class="headerlink" title="键值型数据库"></a>键值型数据库</h4><p>键值型数据库通过 Key-Value 键值的方式来存储数据，其中 Key 和 Value 可以是简单的对象，也可以是复杂的对象。Key 作为唯一的标识符，优点是查找速度快，在这方面明显优于关系型数据库，缺点是无法像关系型数据库一样使用条件过滤（比如 WHERE），如果你不知道去哪里找数据，就要遍历所有的键，这就会消耗大量的计算。</p>
+<p>键值型数据库典型的使用场景是作为内存缓存。Redis 是最流行的键值型数据库。</p>
+<h4 id="文档型数据库"><a href="#文档型数据库" class="headerlink" title="文档型数据库"></a>文档型数据库</h4><p>此类数据库可存放并获取文档，可以是XML、JSON等格式。在数据库中文档作为处理信息的基本单位，一个文档就相当于一条记录。文档数据库所存放的文档，就相当于键值数据库所存放的“值”。MongoDB 是最流行的文档型数据库。此外，还有CouchDB等。</p>
+<h4 id="列式数据库"><a href="#列式数据库" class="headerlink" title="列式数据库"></a>列式数据库</h4><p>列式数据库是相对于行式存储的数据库，Oracle、MySQL、SQL Server 等数据库都是采用的行式存储（Row-based），而列式数据库是将数据按照列存储到数据库中，这样做的好处是可以大量降低系统的 I&#x2F;O，适合于分布式文件系统，不足在于功能相对有限。典型产品：HBase等。</p>
+<h4 id="图形数据库"><a href="#图形数据库" class="headerlink" title="图形数据库"></a>图形数据库</h4><p>图形数据库，利用了图这种数据结构存储了实体（对象）之间的关系。图形数据库最典型的例子就是社交网络中人与人的关系，数据模型主要是以节点和边（关系）来实现，特点在于能高效地解决复杂的关系问题。</p>
+<p>图形数据库顾名思义，就是一种存储图形关系的数据库。它利用了图这种数据结构存储了实体（对象）之间的关系。关系型数据用于存储明确关系的数据，但对于复杂关系的数据存储却有些力不从心。如社交网络中人物之间的关系，如果用关系型数据库则非常复杂，用图形数据库将非常简单。典型产品：Neo4J、InfoGrid等。</p>
+<h2 id="SQL-Server"><a href="#SQL-Server" class="headerlink" title="SQL Server"></a>SQL Server</h2><h3 id="sql-sever的概述"><a href="#sql-sever的概述" class="headerlink" title="sql sever的概述"></a>sql sever的概述</h3><p>SQL Server 是Microsoft 公司推出的关系型数据库管理系统。具有使用方便可伸缩性好与相关软件集成程度高等优点，可跨越从运行Microsoft Windows 98 的小型电脑到运行Microsoft Windows 2012 的大型多处理器的服务器等多种平台使用。</p>
+<p>Microsoft SQL Server 是一个全面的数据库平台，使用集成的商业智能 (BI)工具提供了企业级的数据管理。Microsoft SQL Server 数据库引擎为关系型数据和结构化数据提供了更安全可靠的存储功能，使您可以构建和管理用于业务的高可用和高性能的数据应用程序。</p>
+<p>SQL Server 是一个关系数据库管理系统。它最初是由Microsoft、Sybase 和Ashton-Tate三家公司共同开发的，于1988 年推出了第一个OS&#x2F;2版本。在Windows NT 推出后，Microsoft与Sybase 在SQL Server 的开发上就分道扬镳了，Microsoft 将SQL Server移植到Windows NT系统上，专注于开发推广SQL Server 的Windows NT 版本。Sybase 则较专注于SQL Server在UNⅨ操作系统上的应用。</p>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><h4 id="界面方式"><a href="#界面方式" class="headerlink" title="界面方式"></a>界面方式</h4><p> 在数据库项，右键“新建数据库”，然后在弹出窗口中输入数据库名称“TEST0”，然后点击确定即可。</p>
+<h4 id="命令方式"><a href="#命令方式" class="headerlink" title="命令方式"></a>命令方式</h4><p>  使用命令行的方式创建一个名字为“TEST1”的数据库，同时需要明确指定TEST1的数据文件和日志文件所储存的路径和大小等信息。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  CREATE DATABASE TEST1</span><br><span class="line">ON</span><br><span class="line">(</span><br><span class="line">	NAME=<span class="string">&#x27;TEST1_DATA&#x27;</span>,</span><br><span class="line">	FILENAME=<span class="string">&#x27;C:\Users\TEST1_DATA.MDF&#x27;</span>,</span><br><span class="line">	SIZE=5MB,</span><br><span class="line">	MAXSIZE=UNLIMITED,</span><br><span class="line">	FILEGROWTH=10%</span><br><span class="line">)</span><br><span class="line">LOG ON</span><br><span class="line">(</span><br><span class="line">	NAME=<span class="string">&#x27;TEST1_LOG&#x27;</span>,</span><br><span class="line">	FILENAME=<span class="string">&#x27;C:\Users\TEST1_LOG.LDF&#x27;</span>,</span><br><span class="line">	SIZE=5MB,</span><br><span class="line">	MAXSIZE=50MB,</span><br><span class="line">	FILEGROWTH=1MB	</span><br><span class="line">)</span><br><span class="line">GO</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><h4 id="界面方式-1"><a href="#界面方式-1" class="headerlink" title="界面方式"></a>界面方式</h4><p>在“TESTO”数据库右键找到“属性”项，在弹出窗口中选择“文件”项，就可以对数据进行修改。</p>
+<h4 id="命令方式-1"><a href="#命令方式-1" class="headerlink" title="命令方式"></a>命令方式</h4><p>使用“ALTER DATABASE”命令对数据库可进行以下修改：</p>
+<p>改变数据文件的大小和增长方式<br>改变日志文件的大小和增长方式<br>增加或删除日志文件<br>增加或删除数据文件<br>增加或删除文件组</p>
+<h5 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE database_name</span><br><span class="line">&#123;	ADD FILE &lt;filespec&gt;[,…n][ TO FILEGROUP filegroup_name ]	/*在文件组中增加数据文件*/</span><br><span class="line"></span><br><span class="line">| ADD LOG FILE &lt;filespec&gt;[,…n]           				/*增加日志文件*/</span><br><span class="line"></span><br><span class="line">| REMOVE FILE logical_file_name           				/*删除数据文件*/</span><br><span class="line"></span><br><span class="line">| ADD FILEGROUP filegroup_name          				/*增加文件组*/</span><br><span class="line"></span><br><span class="line">| REMOVE FILEGROUP filegroup_name      					/*删除文件组*/</span><br><span class="line"></span><br><span class="line">| MODIFY FILE &lt;filespec&gt;                 				/*更改文件属性*/</span><br><span class="line"></span><br><span class="line">| MODIFY NAME = new_dbname           					/*数据库更名*/</span><br><span class="line"></span><br><span class="line">| MODIFY FILEGROUP filegroup_name &#123;filegroup_property | NAME = new_filegroup_name &#125;</span><br><span class="line"></span><br><span class="line">| SET &lt;optionspec&gt; [ ,...n ] [ WITH &lt;termination&gt; ]   	/*设置数据库属性*/</span><br><span class="line"></span><br><span class="line">| COLLATE &lt; collation_name &gt; 							/*指定数据库排序规则*/</span><br><span class="line">&#125;</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+<h5 id="演示前提"><a href="#演示前提" class="headerlink" title="演示前提:"></a>演示前提:</h5><p>假设已经创建了数据库TEST1，它只有一个主数据文件，其逻辑文件名为TEST1_DATA，大小为5MB，最大为50MB，增长方式为按10%增长。</p>
+<h5 id="案例演示1："><a href="#案例演示1：" class="headerlink" title="案例演示1："></a>案例演示1：</h5><p>修改数据库TEST1现有数据文件的属性，将主数据文件的最大大小改为100MB，增长方式改为按每次5MB增长。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE TEST1</span><br><span class="line">	MODIFY FILE </span><br><span class="line">	(	</span><br><span class="line">		NAME = TEST1_DATA,  --这里是逻辑名</span><br><span class="line">		MAXSIZE = 100MB,	--将主数据文件的最大大小改为100MB</span><br><span class="line">		FILEGROWTH = 5MB	--将主数据文件的增长方式改为按5MB增长			</span><br><span class="line">	)</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+<h5 id="案例演示2"><a href="#案例演示2" class="headerlink" title="案例演示2"></a>案例演示2</h5><p>为数据库TEST1添加文件组FGROUP，并为此文件组添加两个大小均为10MB的数据文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE TEST1</span><br><span class="line">	ADD FILEGROUP FGROUP  --新增文件组的名字</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">ALTER DATABASE TEST1</span><br><span class="line">	ADD FILE</span><br><span class="line">	(</span><br><span class="line">		NAME = <span class="string">&#x27;TEST1_DATA2&#x27;</span>,</span><br><span class="line">		FILENAME = <span class="string">&#x27;C:\Users\TEST1_DATA2.ndf&#x27;</span>,</span><br><span class="line">		SIZE = 10MB,</span><br><span class="line">		MAXSIZE = 30MB,</span><br><span class="line">		FILEGROWTH = 5MB</span><br><span class="line">	),</span><br><span class="line">	(	</span><br><span class="line">		NAME = <span class="string">&#x27;TEST1_DATA3&#x27;</span>,</span><br><span class="line">		FILENAME = <span class="string">&#x27;C:\Users\TEST1_DATA3.ndf&#x27;</span>,</span><br><span class="line">		SIZE = 10MB,</span><br><span class="line">		MAXSIZE = 30MB,</span><br><span class="line">		FILEGROWTH = 5MB</span><br><span class="line">	)</span><br><span class="line">	TO FILEGROUP FGROUP  --添加到指定文件组</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+<h5 id="案例演示3"><a href="#案例演示3" class="headerlink" title="案例演示3"></a>案例演示3</h5><p>从数据库TEST1中删除一个日志文件，将日志文件TEST1_LOG2删除。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE TEST1</span><br><span class="line">	REMOVE FILE TEST1_LOG2</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h5 id="案例演示4"><a href="#案例演示4" class="headerlink" title="案例演示4"></a>案例演示4</h5><p>将数据库TEST1的名改为JUST_TEST，进行此操作时必须保证该数据库不被其他任何用户使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE TEST1</span><br><span class="line">	MODIFY NAME = JUST_TEST</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库删除"><a href="#数据库删除" class="headerlink" title="数据库删除"></a>数据库删除</h3><h4 id="界面方式-2"><a href="#界面方式-2" class="headerlink" title="界面方式"></a>界面方式</h4><p>在要删除数据库上右键选择“删除”，在弹出窗口中选择确定即可删除当前数据库</p>
+<h4 id="命令方式-2"><a href="#命令方式-2" class="headerlink" title="命令方式"></a>命令方式</h4><p>删除数据库使用“DROP DATABASE”命令。</p>
+<p>语法格式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE database_name[,…n][;]</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h4 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h4><p>删除JUST_TEST数据库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE JUST_TEST</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+<h2 id="SQL-Server数据的类型"><a href="#SQL-Server数据的类型" class="headerlink" title="SQL Server数据的类型"></a>SQL Server数据的类型</h2><h3 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h3><p>整数包括bigint、int、smallint和tinyint，从标识符的含义就可以看出，它们所表示的数范围逐渐缩小。</p>
+<p>bigint：大整数，数范围为-263（-9223372036854775808）～263-1（9223372036854775807），长度为8字节。</p>
+<p>int：整数，数范围为-231（-2147483648）～231-1（2147483647），长度为4字节。</p>
+<p>smallint：短整数，数范围为-215（-32768）～215-1（32767），长度为2字节。</p>
+<p>tinyint：微短整数，数范围为 0～255，长度为1字节。</p>
+<h3 id="精确数值型"><a href="#精确数值型" class="headerlink" title="精确数值型"></a>精确数值型</h3><p>精确数值型包括decimal和numeric，他们可存储从-1038+1到1038-1的数字数据。</p>
+<p>它们的存储长度随精度（位数）变化而变化，最少为5字节，最多为17字节：</p>
+<pre><code>精度为1～9时，存储字节长度为5。
+精度为10～19时，存储字节长度为9。
+精度为20～28时，存储字节长度为13。
+精度为29～38时，存储字节长度为17。
+</code></pre>
+<p>例如，若有声明numeric(8,3)，则存储该类型数据需5字节；而若有声明numeric(22,5)，则存储该类型数据需13字节。</p>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>  浮点型包括real和float[（n）]。两者通常都使用科学计数法表示数据，即形为：位数E阶数，如5.6432E20、-2.98E10、1.287659E-9等。</p>
+<pre><code>real：使用4字节存储数据，表数范围为-3.40E+38～3.40E+38，数据精度为7位有效数字。
+float[(n)] ：表数范围为-1.79E+308～1.79E+308。定义中的n取值范围是1～53，用于指示其精度和存储大小。
+
+当n在1～24之间时，实际上是定义了一个real型数据，存储长度为4字节，精度为7位有效数字。当n在25～53之间时，存储长度为8字节，精度为15位有效数字。当缺省n时，代表n在25～53之间。
+</code></pre>
+<h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><p>字符型用于存储字符串，在输入字符串时，需将串中的符号用单引号括起来，如‘abc’。</p>
+<p>字符型包括两类：char是固定长度的数据类型，varchar是可变长度的数据类型，二者均使用ASCII字符集。</p>
+<p> char[(n)]：定长字符数据类型，其中n在1到8000之间，缺省为1。当实际存储的串长度不足n时，则在串的尾部添加空格。</p>
+<p>varchar[(n)]：变长字符数据类型，这里n表示的是字符串可达到的最大长度。</p>
+<h3 id="Unicode字符型"><a href="#Unicode字符型" class="headerlink" title="Unicode字符型"></a>Unicode字符型</h3><p>Unicode是“统一字符编码标准”，用于支持国际上非英语语种的字符数据的存储和处理，包括nchar[(n)]和nvarchar[(n)] 。</p>
+<p>Unicode字符型包括两类：nchar是固定长度的数据类型，nvarchar是可变长度的数据类型，二者均使用UNICODE UCS-2字符集。</p>
+<p>nchar[(n)]：n的值在1与4000之间，缺省为1，长度2n字节。若输入的字符串长度不足n，将以空白字符补足。</p>
+<p>nvarchar[(n)]：nvarchar[(n)]为最多包含n个字符的可变长度Unicode字符型数据，n的值在1与4000之间，缺省为1。长度是所输入字符个数的两倍。</p>
+<p>实际上，nchar、nvarchar与char、varchar的使用非常相似，只是字符集不同（前者使用Unicode字符集，后者使用ASCII字符集）。</p>
+<h3 id="二进制型"><a href="#二进制型" class="headerlink" title="二进制型"></a>二进制型</h3><p>二进制数据类型表示的是位数据流，包括binary（固定长度）和varbinary（可变长度）两种。</p>
+<p> binary [(n)]：固定长度的n个字节二进制数据。n取值范围为1到8000，缺省为1。</p>
+<p> varbinary [(n)]：n个字节变长二进制数据。n取值范围为1到8000，缺省为1。</p>
+<h2 id="SQL-Server数据表管理"><a href="#SQL-Server数据表管理" class="headerlink" title="SQL Server数据表管理"></a>SQL Server数据表管理</h2><p>首先先创建一个数据库，名字叫”学生信息数据库”，以下操作均在改数据库中进行。</p>
+<h3 id="新建数据表"><a href="#新建数据表" class="headerlink" title="新建数据表"></a>新建数据表</h3><p>学生表的表结构：</p>
+<p>列 名	数 据 类 型	      长度 可空	默认值	   说 明<br>学号	定长字符型（char）	6	×	无	   主键，2位年级，2位班号，2位序号<br>姓名	定长字符型（char）	8	×	无	<br>性别	位型（bit）	        1	√	1	    1：男；0：女<br>出生时间 日期型（datetime）	系统默认 √ 无	<br>专业	定长字符型（char）	12	√	无	<br>总学分	整数型（int）	   4	√	0        0≤总学分&lt;160<br>备注	变长字符型（varchar）	500	√	无	</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE XSB (</span><br><span class="line">    学号 char(<span class="number">6</span>) NOT NULL ,</span><br><span class="line">    姓名 char(<span class="number">8</span>) NOT NULL ,</span><br><span class="line">    性别 bit NULL DEFAULT (<span class="number">1</span>) ,</span><br><span class="line">    出生时间 datetime NULL ,</span><br><span class="line">    专业 char(<span class="number">12</span>) NULL ,</span><br><span class="line">    总学分 <span class="built_in">int</span> NULL DEFAULT (<span class="number">0</span>) CHECK (总学分&gt;=<span class="number">0</span> AND 总学分&lt;<span class="number">160</span>) ,</span><br><span class="line">    备注 varchar(<span class="number">500</span>) NULL ,</span><br><span class="line">    PRIMARY KEY (学号)</span><br><span class="line">)</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<p>课程表的表结构</p>
+<p>列 名	数 据 类 型	长 度	可 空	默 认 值	说 明<br>课程号	定长字符型（char）	3	×	无	主键<br>课程名	定长字符型（char）	16	×	无	<br>开课学期	整数型（tinyint）	1	√	1	只能为1～8<br>学时	整数型（tinyint）	1	√	0	<br>学分	整数型（tinyint）	1	×	0	</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE KCB (</span><br><span class="line">    课程号 char(3) NOT NULL ,</span><br><span class="line">    课程名 char(16) NULL ,</span><br><span class="line">    开课学期 tinyint NULL DEFAULT (1) CHECK (开课学期&gt;=1 AND 开课学期&lt;=8) ,</span><br><span class="line">    学时 tinyint NULL DEFAULT (0) ,</span><br><span class="line">    学分 tinyint NULL DEFAULT (0) ,</span><br><span class="line">    PRIMARY KEY (课程号)</span><br><span class="line">)</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<p>成绩表的表结构</p>
+<p>列 名	数 据 类 型	     长度 可空 默认值	说明<br>学号	定长字符型（char）	6	×	无	主键<br>课程号	定长字符型（char）	3	×	无	主键<br>成绩	整数型（int）	默认值	√	0	</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE CJB (</span><br><span class="line">    学号 char(6) NOT NULL ,</span><br><span class="line">    课程号 char(3) NOT NULL ,</span><br><span class="line">    成绩 int NULL DEFAULT (0) ,</span><br><span class="line">    PRIMARY KEY (学号, 课程号)</span><br><span class="line">)</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改数据表"><a href="#修改数据表" class="headerlink" title="修改数据表"></a>修改数据表</h3><p>添加一列：在学生表中增加1个新列一奖学金等级，类型为tinyint，允许为null</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table XSB</span><br><span class="line">	add 奖学金等级 tinyint NULL</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+<p>修改一列：修改学生表中奖学金等级列的类型，类型为int，不允许为null</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table XSB</span><br><span class="line">     alter colum 奖学金等级 int NOT NULL</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<p>删除一列:删除XSB表中奖学金等级这一个列</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table XSB</span><br><span class="line">    drop  column 奖学金等级</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除数据表"><a href="#删除数据表" class="headerlink" title="删除数据表"></a>删除数据表</h3><p>删除学生表：<br>drop table XSB<br>GO</p>
+<p>删除课程表:<br>drop table KCB<br>GO</p>
+<h2 id="SQL-Server表数据管理"><a href="#SQL-Server表数据管理" class="headerlink" title="SQL Server表数据管理"></a>SQL Server表数据管理</h2><p>首先创建一个数据表，名字叫“XSB”，以下操作均在该数据表中进行。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">陆柒</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/">http://example.com/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">LiuQi's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/11/03/%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">僵尸进程的创建和杀死</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">陆柒</div><div class="author-info__description">精诚所至，金石为开。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">今天也要加油鸭！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">关系型数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E8%B4%A8"><span class="toc-number">1.1.</span> <span class="toc-text">实质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8A%BF"><span class="toc-number">1.2.</span> <span class="toc-text">优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">非关系型数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">有哪些非关系型数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%94%AE%E5%80%BC%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.1.</span> <span class="toc-text">键值型数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.2.</span> <span class="toc-text">文档型数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.3.</span> <span class="toc-text">列式数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.4.</span> <span class="toc-text">图形数据库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Server"><span class="toc-number">3.</span> <span class="toc-text">SQL Server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql-sever%E7%9A%84%E6%A6%82%E8%BF%B0"><span class="toc-number">3.1.</span> <span class="toc-text">sql sever的概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.</span> <span class="toc-text">创建数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.1.</span> <span class="toc-text">界面方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">命令方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.3.</span> <span class="toc-text">修改数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E6%96%B9%E5%BC%8F-1"><span class="toc-number">3.3.1.</span> <span class="toc-text">界面方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F-1"><span class="toc-number">3.3.2.</span> <span class="toc-text">命令方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA%E5%89%8D%E6%8F%90"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">演示前提:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA1%EF%BC%9A"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">案例演示1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA2"><span class="toc-number">3.3.2.4.</span> <span class="toc-text">案例演示2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA3"><span class="toc-number">3.3.2.5.</span> <span class="toc-text">案例演示3</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA4"><span class="toc-number">3.3.2.6.</span> <span class="toc-text">案例演示4</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E9%99%A4"><span class="toc-number">3.4.</span> <span class="toc-text">数据库删除</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E6%96%B9%E5%BC%8F-2"><span class="toc-number">3.4.1.</span> <span class="toc-text">界面方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F-2"><span class="toc-number">3.4.2.</span> <span class="toc-text">命令方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA"><span class="toc-number">3.4.3.</span> <span class="toc-text">案例演示</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Server%E6%95%B0%E6%8D%AE%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">SQL Server数据的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">整数型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E6%95%B0%E5%80%BC%E5%9E%8B"><span class="toc-number">4.2.</span> <span class="toc-text">精确数值型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="toc-number">4.3.</span> <span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">4.4.</span> <span class="toc-text">字符型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unicode%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">4.5.</span> <span class="toc-text">Unicode字符型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%9E%8B"><span class="toc-number">4.6.</span> <span class="toc-text">二进制型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Server%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">SQL Server数据表管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">5.1.</span> <span class="toc-text">新建数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">5.2.</span> <span class="toc-text">修改数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">5.3.</span> <span class="toc-text">删除数据表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Server%E8%A1%A8%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">SQL Server表数据管理</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库复习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库复习"/></a><div class="content"><a class="title" href="/2022/11/08/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库复习">数据库复习</a><time datetime="2022-11-08T01:25:47.281Z" title="发表于 2022-11-08 09:25:47">2022-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/03/%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B/" title="僵尸进程的创建和杀死"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="僵尸进程的创建和杀死"/></a><div class="content"><a class="title" href="/2022/11/03/%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B/" title="僵尸进程的创建和杀死">僵尸进程的创建和杀死</a><time datetime="2022-11-03T03:11:05.940Z" title="发表于 2022-11-03 11:11:05">2022-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/26/%E5%94%A0%E5%94%A0%E5%8F%A8%E5%8F%A8/" title="大摆特摆"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大摆特摆"/></a><div class="content"><a class="title" href="/2022/10/26/%E5%94%A0%E5%94%A0%E5%8F%A8%E5%8F%A8/" title="大摆特摆">大摆特摆</a><time datetime="2022-10-26T02:45:41.664Z" title="发表于 2022-10-26 10:45:41">2022-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统课后题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统课后题"/></a><div class="content"><a class="title" href="/2022/10/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统课后题">操作系统课后题</a><time datetime="2022-10-25T09:16:00.242Z" title="发表于 2022-10-25 17:16:00">2022-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/21/java/" title="java学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java学习"/></a><div class="content"><a class="title" href="/2022/10/21/java/" title="java学习">java学习</a><time datetime="2022-10-21T11:37:17.865Z" title="发表于 2022-10-21 19:37:17">2022-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 陆柒</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/26/唠唠叨叨/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/8.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-26</span><a class="blog-slider__title" href="2022/10/26/唠唠叨叨/" alt="">大摆特摆</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/26/唠唠叨叨/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/25/操作系统/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/4.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-25</span><a class="blog-slider__title" href="2022/10/25/操作系统/" alt="">操作系统课后题</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/25/操作系统/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/21/java/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-21</span><a class="blog-slider__title" href="2022/10/21/java/" alt="">java学习</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/21/java/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/20/常见用语/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-20</span><a class="blog-slider__title" href="2022/10/20/常见用语/" alt="">关于网络安全的常见用语缩写</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/20/常见用语/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/17/Metasploit的使用/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-17</span><a class="blog-slider__title" href="2022/10/17/Metasploit的使用/" alt="">Metasploit的使用</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/10/17/Metasploit的使用/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
